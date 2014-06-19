@@ -1,0 +1,9 @@
+{
+ "bot_id": "acpr_banque_de_france",
+ "title": "ACPR Banque de France - Regafi (Financial Firms Register)",
+ "description": "ACPR Banque de France - Regafi (Financial Firms Register)",
+ "data_type": "primary data",
+ "identifying_fields": [],
+ "files": ["scraper.py"],
+ "frequency": "monthly"
+}
