@@ -9,6 +9,6 @@ setup(name='acpr',
       install_requires = ['picklecache','requests','lxml'],
       tests_require = ['nose'],
       scripts = ['bin/acpr'],
-      version='0.0.1',
+      version='0.0.2',
       license='AGPL',
 )
