@@ -1,3 +1,8 @@
+import os
+
+import requests
+from picklecache import cache
+
 @cache(os.path.join(os.path.expanduser('~'), '.acpr'))
 def search(cat:str, pg:int):
     '''
@@ -22,6 +27,3 @@ def search(cat:str, pg:int):
         'pg': pg,
     }
     return requests.get(url, params = params)
-
-def categories():
-    response = search('not-a-real-category', 1)
