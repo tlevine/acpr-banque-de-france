@@ -11,3 +11,7 @@ def search(response):
     for tr in table.xpath('tr[td]'):
         values = (td.text_content() for td in tr.xpath('td'))
         yield OrderedDict(zip(keys, values))
+
+def is_page_one(response):
+    html = fromstring(response.text)
+    return ['1'] == html.xpath('//span[@class="active"]/text()')
