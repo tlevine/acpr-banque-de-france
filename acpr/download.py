@@ -4,9 +4,8 @@ import requests
 from picklecache import cache
 
 @cache(os.path.join(os.path.expanduser('~'), '.acpr'))
-def search(cat:str, pg:int):
+def search(pg:int):
     '''
-    cat is from the input box.
     pg is a natural number.
     '''
     url = 'https://www.regafi.fr/spip.php'
@@ -22,7 +21,7 @@ def search(cat:str, pg:int):
         'nom': '',
         'siren_agent': '',
         'num': '',
-        'cat': cat,
+        'cat': '0',
         'retrait': '0',
         'pg': pg,
     }

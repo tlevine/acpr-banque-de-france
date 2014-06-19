@@ -1,6 +1,13 @@
+import re
+from collections import OrderedDict
+
 from lxml.html import fromstring
 
-def categories(response):
-    response = search('not-a-real-category', 'not-a-real-page')
+def search(response):
     html = fromstring(response.text)
-    return html
+    table = html.xpath('//table[@summary="Search results"]')[0]
+    keys = [re.sub(r'[^a-z]+', '.', str(th.text_content().strip()), flags = re.IGNORECASE) for th in table.xpath('tr[position()=1]/th')]
+    print(keys)
+    for tr in table.xpath('tr[td]'):
+        values = (td.text_content() for td in tr.xpath('td'))
+        yield OrderedDict(zip(keys, values))
