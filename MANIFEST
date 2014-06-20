@@ -5,3 +5,4 @@ acpr/__init__.py
 acpr/download.py
 acpr/main.py
 acpr/parse.py
+bin/acpr

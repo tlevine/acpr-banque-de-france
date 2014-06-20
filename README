@@ -1,2 +1,5 @@
 Get `these data <https://www.regafi.fr/spip.php?rubrique3>`_ for
 `this mission <http://missions.opencorporates.com/missions/565/claim>`_.
+Run like so. ::
+
+    acpr > acpr.jsonlines

@@ -1,4 +1,4 @@
-from distutils.core import setup
+/rom distutils.core import setup
 
 setup(name='acpr',
       author='Thomas Levine',
@@ -9,6 +9,6 @@ setup(name='acpr',
       install_requires = ['picklecache','requests','lxml'],
       tests_require = ['nose'],
       scripts = ['bin/acpr'],
-      version='0.0.2',
+      version='0.0.3',
       license='AGPL',
 )
