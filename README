@@ -3,3 +3,7 @@ Get `these data <https://www.regafi.fr/spip.php?rubrique3>`_ for
 Run like so. ::
 
     acpr > acpr.jsonlines
+
+This repository contains ``manifest.json`` and ``scraper.py``
+files in order to interact with Turbot. If you don't work for
+OpenCorporates, they're probably worth ignoring.
